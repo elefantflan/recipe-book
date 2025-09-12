@@ -1,1 +1,1 @@
-This is an odin recipe project
+Recipe Book For Your Daily Cooking Needs

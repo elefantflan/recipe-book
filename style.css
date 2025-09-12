@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'misologist'; /* Give your font a name */
+    src: local('misologist'), /* Optional: Check for local copy first */
+         url('font/Misologist.otf') format('truetype'),
+         url('font/Misologist.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size:normal;
+  }
+@font-face {
+    font-family: 'retro'; /* Give your font a name */
+    src: local('retro'), /* Optional: Check for local copy first */
+         url('font/HotRod.ttf') format('truetype'),
+         url('font/HotRod.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size:normal;
+  }
+
+body{
+    width:clamp(500px,75vw, 700px);
+    margin: 20px auto;
+
+    --backgroundColor: #020024;
+    --backgroundGradient: linear-gradient(45deg,rgba(2, 0, 36, 1) 0%, rgb(26, 26, 183) 35%, rgb(123, 246, 255) 100%);
+    background: var(--backgroundColor);
+    background: var(--backgroundGradient);
+    --linkColorBackground:#833AB4;
+    --linkColorLinear: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+    --fontGeneral: "Lucida Console", "Courier New", monospace;
+    font-family: var(--fontGeneral);
+
+    --fontTitle:'retro';
+    --headerTextColor: linear-gradient(0deg, #ffe762, #fbffe2);
+    --navTextColor: linear-gradient(180deg, #00ff33, #bdffa9);
+    --nameColor: linear-gradient(180deg, #073811, #437135);
+    --fontCategories: 'misologist';
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    flex:auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    width: 400px;
+    height:260px;
+    margin-bottom:0;
+    padding: 0;
+
+    font-family: var(--fontTitle);
+    font-size: 3rem;
+    text-align: center;
+    background-image: var(--headerTextColor);
+
+    /* Clip the background to the text's shape */
+    background-clip: text;
+    -webkit-background-clip: text; /* Vendor prefix for Safari/older browsers */
+  
+    /* Make the text itself transparent */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Vendor prefix for Safari/older browsers */
+    
+  
+}
+
+span::before{
+    content:".⭒˚";
+    margin-right:8px;
+    font-size:4rem;
+    align-items: center;
+}
+span::after{
+    content:"⋆.˚";
+    margin-right:8px;
+    font-size:4rem;
+    align-items: center;
+}
+
+
+.nav{
+    display:flex;
+    gap:15px;
+    margin-right: 10px;
+    margin-top:0;
+}
+
+.nav a{
+    font-family: var(--fontTitle);
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    background-image: var(--navTextColor);
+
+    /* Clip the background to the text's shape */
+    background-clip: text;
+    -webkit-background-clip: text; /* Vendor prefix for Safari/older browsers */
+  
+    /* Make the text itself transparent */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Vendor prefix for Safari/older browsers */
+}
+
+h3{
+    font-family: var(--fontCategories);
+    color:rgb(240, 231, 110);
+}
+
+h2{
+    text-align: center;
+    font-family: var(--fontTitle);
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+a{
+    text-decoration: none;
+
+    background-image: var(--headerTextColor);
+
+    /* Clip the background to the text's shape */
+    background-clip: text;
+    -webkit-background-clip: text; /* Vendor prefix for Safari/older browsers */
+  
+    /* Make the text itself transparent */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Vendor prefix for Safari/older browsers */
+  
+}
+ul{
+    list-style: none;
+    
+}
+li::before{
+    content: "➤";
+    margin-right: 5px;
+    color: rgba(65, 239, 255, 0.5)
+}
+
+.nav li::before{
+    content:none;
+}
+
+.main{
+    background-image: var(--headerTextColor);
+
+    /* Clip the background to the text's shape */
+    background-clip: text;
+    -webkit-background-clip: text; /* Vendor prefix for Safari/older browsers */
+  
+    /* Make the text itself transparent */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Vendor prefix for Safari/older browsers */
+}
+
+img{
+    border-radius: 2%;
+}
